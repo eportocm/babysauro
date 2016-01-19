@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta http-equiv="X-UA-Compatible" content="EmulateIE8" />
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Ranking DaHora Tennis</title>
+            </f:facet>
+
+			<link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/css/sistema.css" />
+        </h:head>
+
+
+        <h:body>
+
+            <p:layout fullPage="true" >
+				
+
+                <p:layoutUnit id="bottom" position="south" size="30">
+                    <h:outputLink value="#">
+                                Desenvolvido Por Eduardo e Gabriel Baltazar
+                    </h:outputLink>
+
+                </p:layoutUnit>
+
+                
+
+                <p:layoutUnit id="center" position="center">
+                    <ui:insert name="corpo" />
+                </p:layoutUnit>
+
+            </p:layout>
+
+
+        </h:body>
+
+    </f:view>
+</html>

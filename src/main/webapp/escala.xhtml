@@ -1,0 +1,45 @@
+<ui:composition template="/WEB-INF/templates/layoutPadrao.xhtml" 
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html" 
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:define name="corpo">
+	
+		<h1>Escala</h1>
+		
+		<p:separator />
+	
+		<p:dataTable var="missa" value="#{missaBean.missas}" paginator="true" rowsPerPageTemplate="5,10,15" rows="10" widgetVar="m"
+					 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+					 >
+		
+			<f:facet name="header" >
+				
+            	Missas
+        	</f:facet>
+			
+			<p:column headerText="Data">
+				<h:outputText value="#{missa.data.time}"  >
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+				</h:outputText>
+			</p:column>
+			
+			<p:column headerText="Banda"  >
+				<h:outputText value="#{missa.bandaMissa.nomeBanda}"  />
+			</p:column>
+			
+			<p:column headerText="Período" >
+				<h:outputText value="#{missa.periodo}" />
+			</p:column>
+			
+			<p:column headerText="Observação">
+				<h:outputText value="#{missa.obs}" />
+			</p:column>
+		
+		</p:dataTable>		
+	
+	</ui:define>
+	
+</ui:composition>

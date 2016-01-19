@@ -1,0 +1,48 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:h="http://java.sun.com/jsf/html"
+     xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:ui="http://java.sun.com/jsf/facelets"
+     xmlns:p="http://primefaces.org/ui">
+        
+    <h:form id="frmMenu">          
+		<p:menubar id="menu" >
+			<p:submenu label="Cadastros" icon="ui-icon-pencil">
+		    	<p:submenu label="Tenistas" icon="ui-icon-contact">
+		        	<p:menuitem value="Novo" url="/publico/tenista.jsf" />
+		            <p:menuitem value="Listar" url="#" />
+		        </p:submenu>
+		        <p:menuitem value="Open" url="#" />
+		        <p:menuitem value="Quit" url="#" />
+		    </p:submenu>
+		
+	        <p:submenu label="Caixa" icon="ui-icon-document">
+	            <p:menuitem value="Undo" url="#" icon="ui-icon-arrowreturnthick-1-w"></p:menuitem>
+	            <p:menuitem value="Redo" url="#" icon="ui-icon-arrowreturnthick-1-e"></p:menuitem>
+	        </p:submenu>
+		
+	        <p:submenu label="Help" icon="ui-icon-help">
+	            <p:menuitem value="Contents" url="#" />
+	            <p:submenu label="Search" icon="ui-icon-search">
+	                <p:submenu label="Text">
+	                    <p:menuitem value="Workspace" url="#" />
+	                </p:submenu>
+	                <p:menuitem value="File" url="#" />
+	            </p:submenu>
+	        </p:submenu>
+		         
+	        <f:facet name="options">
+			<h:form>   
+	 				<p:menuButton value="Usuario" >
+	 					<p:menuitem value="Meus Dados" url="#" icon="ui-icon-person" />
+	             		<p:menuitem value="Logout" url="#" icon="ui-icon-close" />	
+	 				</p:menuButton> 
+	 			</h:form>
+			</f:facet>
+		</p:menubar>
+    </h:form>       
+    
+    <div style="height:800px"></div>
+    
+	<p:sticky target="frmMenu" />        
+
+</ui:composition>

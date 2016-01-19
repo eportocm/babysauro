@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="babysauro" transaction-type="RESOURCE_LOCAL">
+
+		<!--<provider>org.hibernate.ejb.HibernatePersistence</provider>-->
+		<non-jta-data-source>java:comp/env/jdbc/babysauro</non-jta-data-source>
+
+		<properties>
+			<!--  <property name="javax.persistence.jdbc.url" value="jdbc:firebirdsql:localhost/3050:banco.fdb?charSet=UTF-8" />-->
+			<!--
+			<property name="javax.persistence.jdbc.url" value="jdbc:firebirdsql:gbrjodt0710/3050:C:\\publico\\dinossauroweb\\FE.fdb?charSet=UTF-8" />
+			<property name="javax.persistence.jdbc.user" value="sysdba" />
+			<property name="javax.persistence.jdbc.password" value="masterkey" />
+			<property name="javax.persistence.jdbc.driver" value="org.firebirdsql.jdbc.FBDriver" />
+			-->
+
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.FirebirdDialect" />
+      		
+
+		</properties>
+
+	</persistence-unit>
+</persistence>

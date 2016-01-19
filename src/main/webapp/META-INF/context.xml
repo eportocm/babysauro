@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Manager pathname="" />
+	<Resource name="BeanManager" auth="Container"
+		type="javax.enterprise.inject.spi.BeanManager" factory="org.jboss.weld.resources.ManagerObjectFactory" />
+		
+		
+		<Resource name="jdbc/babysauroSS" auth="Container"
+		factory="org.apache.naming.factory.BeanFactory" type="com.mchange.v2.c3p0.ComboPooledDataSource"
+		driverClass="org.firebirdsql.jdbc.FBDriver" jdbcUrl="jdbc:firebirdsql:gbrjodt0710/3050:C:\\publico\\dinossauroweb\\FE.fdb?charSet=UTF-8"
+		user="sysdba" password="masterkey" minPoolSize="2" maxPoolSize="10"  />
+	
+</Context>

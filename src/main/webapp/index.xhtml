@@ -1,0 +1,32 @@
+<ui:composition template="/WEB-INF/templates/layoutPadrao.xhtml" 
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html" 
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:define name="corpo">
+		
+		<h:form id="form">
+
+			<p:panel header="Login do Usuário"  >
+			
+				<p:messages />
+				
+				<p:panelGrid columns="2" style="width: 100%; margin-top: 20px" columnClasses="rotulo, campo" >
+					<p:outputLabel value="Login" />
+					<p:inputText  style="width:20%;" />
+					
+					<p:outputLabel value="Senha"  />
+					<p:password  style="width:20%;" />
+					
+					<p:outputLabel />
+					<p:commandButton value="Login"  update="form" />
+					
+				</p:panelGrid>
+			</p:panel>
+			
+		</h:form>
+	</ui:define>	
+
+</ui:composition>  	
